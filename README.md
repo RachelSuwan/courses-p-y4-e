@@ -1,1 +1,1 @@
-# courses-p-y4-e
+# courses-python-for-everybody

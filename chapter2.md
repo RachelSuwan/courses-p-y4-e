@@ -11,35 +11,38 @@ key: 48fd161bd9
 xp: 100
 ```
 
-Prompting User for Input using Python
+Creating variables and using the variables
 
 `@instructions`
-Make your code prompt the user for input and have it display like the code below.
-
-Enter your name: Chuck
-Hello Chuck
+Use the editor on your right to write python code. 
+In this exercise you must assign a value to a variable and print
 
 `@hint`
-Use the keyword "input" to get input from the user. You can add a string of words to your input to prompt the user.
+Put some text in between the two double quotes to create a string that is assigned to variable. 
+Then put 'variable' in the print statement
 
 `@pre_exercise_code`
 ```{python}
-
+#Assign a value to this variable. You can put text in the double quotes or remove double quotes and put a number.
+variable = ""
+#Put the name of the variable inside the print parentheses to call it in a print statement.
+print()
 ```
 
 `@sample_code`
 ```{python}
-name = 
-print("Hello " + name)
+variable = 
+print()
 ```
 
 `@solution`
 ```{python}
-name = input("Enter your name: ")
-print("Hello " + name)
+variable = "This is a string, anything can go here"
+print(variable)
 ```
 
 `@sct`
 ```{python}
-
+Ex.check_value(variable).has_equal_value()
+Ex.check_function('print').has_equal_value()
 ```

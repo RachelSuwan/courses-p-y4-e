@@ -43,6 +43,6 @@ print(variable)
 
 `@sct`
 ```{python}
-Ex.check_value(variable).has_equal_value()
-Ex.check_function('print').has_equal_value()
+Ex().check_value(variable).has_equal_value()
+Ex().check_function('print').has_equal_value()
 ```

@@ -23,15 +23,14 @@ Then put 'variable' in the print statement
 
 `@pre_exercise_code`
 ```{python}
-#Assign a value to this variable. You can put text in the double quotes or remove double quotes and put a number.
-variable = ""
-#Put the name of the variable inside the print parentheses to call it in a print statement.
-print()
+
 ```
 
 `@sample_code`
 ```{python}
-variable = 
+#Assign a value to this variable. You can put text in the double quotes or remove double quotes and put a number.
+variable = ""
+#Put the name of the variable inside the print parentheses to call it in a print statement.
 print()
 ```
 
@@ -43,6 +42,7 @@ print(variable)
 
 `@sct`
 ```{python}
-Ex().check_value(variable).has_code()
-Ex().check_function('print').has_code()
+Ex().check_object("variable").has_context()
+Ex().check_function('print').has_context()
+success_msg("Good Job!")
 ```

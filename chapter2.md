@@ -42,7 +42,7 @@ print(variable)
 
 `@sct`
 ```{python}
-Ex().check_object("variable").has_context()
-Ex().check_function('print').has_context()
+Ex().check_object("variable")
+Ex().check_function('print')
 success_msg("Good Job!")
 ```

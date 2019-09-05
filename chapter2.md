@@ -3,7 +3,35 @@ title: 'Chapter 2 - Variables, expression and statements'
 description: 'In this module we will be covering the basics of programming languages. With a large focus on values, types, variables and operators. We will also cover the computer uses order of operations to make sense of the code.'
 ---
 
-## Insert exercise title here
+## Types
+
+```yaml
+type: PureMultipleChoiceExercise
+key: 1b28620609
+xp: 50
+```
+
+Determine the types of the following variables:
+1. 3.8
+2. 5
+3. "4.5"
+
+`@hint`
+Anything in quotes will be handled as a string of characters. Integers must be whole numbers.
+
+`@possible_answers`
+- string, integer, float
+- integer, float, string
+- [float, integer, string]
+
+`@feedback`
+- Incorrect
+- Incorrect
+- Correct
+
+---
+
+## Intro to Variables
 
 ```yaml
 type: NormalExercise

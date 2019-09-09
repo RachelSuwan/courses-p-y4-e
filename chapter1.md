@@ -38,19 +38,17 @@ key: 67eb4e961e
 xp: 50
 ```
 
-In an *if statement*, if the logical condition is true, then the indented statement gets executed. If the logical condition is false, the indented statement is skipped.
->Which word will be displayed if x = 10?
+In an *if statement*, if the logical condition is true, then the indented code gets executed. If the logical condition is false, the indented statement is skipped.
+>Which if statement will be executed if x = 10?
+
+
+`@possible_answers`
 - if x < 5 :
 	print('Hello')
 - if x > 10 :
 	print('World')
 - if x < 15 :
 	print('!');
-
-`@possible_answers`
-- Hello
-- World
-- !
 
 `@hint`
 Test each 'if' statement in the console window

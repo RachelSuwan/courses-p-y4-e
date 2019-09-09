@@ -11,7 +11,7 @@ key: e8330433d0
 xp: 50
 ```
 
-A boolean expression is an expression that is 
+A boolean expression is an expression that is
 
 `@hint`
 A boolean is a binary variable, having two states

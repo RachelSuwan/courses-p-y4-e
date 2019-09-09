@@ -27,3 +27,43 @@ A boolean is a binary variable, having two states
 - Correct! A boolean expression is an expression that is either true or false.
 - Incorrect
 - Incorrect
+
+---
+
+## Insert exercise title here
+
+```yaml
+type: MultipleChoiceExercise
+key: 67eb4e961e
+xp: 50
+```
+
+If the logical condition is true, then the indented statement gets executed. If the logical condition is false, the indented statement is skipped.
+>Which word will be displayed if x = 10?
+- if x < 5 :
+	print('Hello')
+- if x > 10 :
+	print('World')
+- if x < 15 :
+	print('!');
+
+`@possible_answers`
+- Hello
+- World
+- !
+
+`@hint`
+Test each 'if' statement in the console window
+
+`@pre_exercise_code`
+```{python}
+x=10
+```
+
+`@sct`
+```{python}
+Ex().has_chosen(correct=3, msgs= [
+  "Incorrect. x = 10, 10 is not less than 5. This makes the logical condition false, so print('Hello') will not execute.",
+  "Incorrect. x = 10, The comparison operator > does not include 10. This makes the logical condition false, so print('World') will not execute.",
+  "Correct! x = 10, 10 is less than 15. This makes the logical condition true, so print('!') will execute."])
+```

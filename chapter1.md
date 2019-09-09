@@ -30,7 +30,7 @@ A boolean is a binary variable, having two states
 
 ---
 
-## Insert exercise title here
+## If Statements
 
 ```yaml
 type: MultipleChoiceExercise
@@ -38,7 +38,7 @@ key: 67eb4e961e
 xp: 50
 ```
 
-If the logical condition is true, then the indented statement gets executed. If the logical condition is false, the indented statement is skipped.
+In an if statement, if the logical condition is true, then the indented statement gets executed. If the logical condition is false, the indented statement is skipped.
 >Which word will be displayed if x = 10?
 - if x < 5 :
 	print('Hello')

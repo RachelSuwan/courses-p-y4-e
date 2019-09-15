@@ -71,7 +71,7 @@ Using the type function to show the type of something
 Assign a string, float, and integer to each of the variables. Order does not matter in this case.
 
 `@hint`
-A string must be in quotes and an integer must be a whole number
+- A string must be in quotes and an integer must be a whole number
 
 `@pre_exercise_code`
 ```{python}
@@ -116,10 +116,9 @@ key: e8df7b6d7f
 xp: 100
 ```
 
-Converting variables to different types
+Converting variables to different types. Use the int(), float(), and str() methods to convert values to a specific type.
 
 `@instructions`
-Use the int(), float(), and str() methods to convert values to a specific type.
 This is useful for ensuring the proper type is assigned to a variable.
 You can either use these methods on the original values being assigned to the variables, or use the functions on the variables themselves and assign the result to the variables.
 >Apply these methods in the following order:
@@ -128,10 +127,10 @@ You can either use these methods on the original values being assigned to the va
 - Apply str() to var3
 
 `@hint`
-Call the variables inside of the int(), float() and str() methods and reassign to the variables.
-Ex. var1 = int(var1)
-or you can do this in the original assignment
-Ex. var1 = int("4.7")
+- Call the variables inside of the int(), float() and str() methods and reassign to the variables:
+- Ex. var1 = int(var1)
+- Or you can do this in the original assignment:
+- Ex. var1 = int("4.7")
 
 `@pre_exercise_code`
 ```{python}
@@ -254,7 +253,7 @@ When more than one operator appears in an expression, the order of evaluation de
 
 `@sct`
 ```{python}
-Ex().has_chosen(correct = 3, # 1-base indexed
+Ex().has_chosen(correct = 1, # 1-base indexed
 msgs = ["Correct! Head over to the next exercise!",
 		"That's incorrect.",
         "That's incorrect."])
@@ -289,7 +288,7 @@ In this exercise we will be investigating what happens when you use commas for l
 `@sct`
 ```{python}
 # Check https://instructor-support.datacamp.com/en/articles/2375523-course-multiple-choice-with-console-exercises on how to write feedback messages for this exercise.
-Ex().has_chosen(correct = 3, # 1-base indexed
+Ex().has_chosen(correct = 1, # 1-base indexed
 msgs = ["Correct! Head over to the next exercise!",
 		"That's incorrect.",
         "That's incorrect."])
@@ -305,17 +304,13 @@ key: 7acd5bf8a4
 xp: 100
 ```
 
-<!-- Guidelines for contexts: https://instructor-support.datacamp.com/en/articles/2375526-course-coding-exercises. -->
 Lets say you have two separate strings str1 and str2. str1 is defined as "This is con" and str2 is defined as "catenating strings together". If you want to combine these two strings you can accomplish this through concatenation. You can do this using the + operator with two strings. 
 
 `@instructions`
-<!-- Guidelines for instructions https://instructor-support.datacamp.com/en/articles/2375526-course-coding-exercises. -->
-<!-- Guidelines for the question: https://instructor-support.datacamp.com/en/articles/2375523-course-multiple-choice-with-console-exercises. -->
 - Create a str3 that is the concatenation of these two strings
 - Print str3
 
 `@hint`
-<!-- Examples of good hints: https://instructor-support.datacamp.com/en/articles/2379164-hints-best-practices. -->
 - Str3 should look something like String 1 + String 2.
 
 `@pre_exercise_code`
@@ -341,7 +336,6 @@ print(str3)
 
 `@sct`
 ```{python}
-# Examples of good success messages: https://instructor-support.datacamp.com/en/articles/2299773-exercise-success-messages.
 Ex().check_object("str3").has_equal_value()
 Ex().check_function("print")
 success_msg("Good Job!")
@@ -403,17 +397,23 @@ key: 439989930c
 xp: 50
 ```
 
-<!-- Guidelines for the question: https://instructor-support.datacamp.com/en/articles/2375523-course-multiple-choice-with-console-exercises. -->
+The following are reserved words in python. Reserved words are words that have specific uses and functions in python. Python's interpreter will always use these words as a way to accomplish a specific task:
+- and & del & global & not & with
+- as & elif & if & or & yield
+- assert & else & import  & pass
+- break & except & in & raise
+- class & finally & is & return
+- continue & for & lambda & try
+- def & from & nonlocal & while
+> Which of the following is a bad use case of reserved words?
 
 `@possible_answers`
-- [Correct answer 1]
-- Wrong answer 2
-- Wrong answer 3
+- print("and del global")
+- [and = str1 + str2]
+- while true:
 
 `@hint`
-<!-- Examples of good hints: https://instructor-support.datacamp.com/en/articles/2379164-hints-best-practices. -->
-- This is an example hint.
-- This is an example hint.
+- This goes the same with all programming languages, you should avoid using reserved words for anything other than their purpose at all costs. They should not be used for naming variables or functions.
 
 `@pre_exercise_code`
 ```{python}
@@ -422,5 +422,59 @@ xp: 50
 
 `@sct`
 ```{python}
-# Check https://instructor-support.datacamp.com/en/articles/2375523-course-multiple-choice-with-console-exercises on how to write feedback messages for this exercise.
+Ex().has_chosen(correct = 2, # 1-base indexed
+msgs = ["That's incorrect.",
+        "Correct! Head over to the next exercise!",
+        "That's incorrect."])
 ```
+
+---
+
+## 1.11 Mnemonic Naming
+
+```yaml
+type: PureMultipleChoiceExercise
+key: 88deb6c654
+xp: 50
+```
+
+Programmers use mnemonic naming to allow the programmer to have a easier time understanding and remembering the use of functions. By creating a name that simply identifies the function we are able to read through code and remember what our code does when we create big projects with lots of code and functions. 
+- What is an example of both mnemonic and non-mnemonic naming conventions from the following?
+
+`@hint`
+- Mnemonic is more specific to the function whereas non-mnemonic is the opposite
+
+`@possible_answers`
+- [pizza = print("this is a pizza"); function2 = print("This is a hamburger")]
+- function1 = print("this is a pizza"); function2 = print("This is a hamburger")
+- pizza = print("this is a pizza"); burger = print("This is a hamburger")
+
+`@feedback`
+- That's Correct!
+- That is an example of two non-mnemonic names for functions
+- That is an example of two mnemonic names for functions
+
+---
+
+## 1.12 Components of an Assignment Statement
+
+```yaml
+type: PureMultipleChoiceExercise
+key: e423dea2b7
+xp: 50
+```
+
+When you create an assignment statement, you are assigning a value to a variable through an operand like an "=". What is the order of the three components of an assignment statement?
+
+`@hint`
+- There is a value, a variable and an operand
+
+`@possible_answers`
+- value, operand, variable
+- name, equals, value
+- [variable, operand, value]
+
+`@feedback`
+- Incorrect.
+- Incorrect.
+- Perfect!

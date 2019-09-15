@@ -65,10 +65,10 @@ key: 53889cf984
 xp: 100
 ```
 
-Using the type function to show the type of something
+Using the type function to show the type of something.
 
 `@instructions`
-Assign a string, float, and integer to each of the variables. Order does not matter in this case.
+>Assign a string, float, and integer to each of the variables. Order does not matter in this case.
 
 `@hint`
 - A string must be in quotes and an integer must be a whole number
@@ -346,46 +346,26 @@ success_msg("Good Job!")
 ## 1.9 Taking Input from the User
 
 ```yaml
-type: NormalExercise
-key: 48fd161bd9
-xp: 100
+type: PureMultipleChoiceExercise
+key: 4de213f542
+xp: 50
 ```
 
-Creating variables and using the variables
-
-`@instructions`
-Use the editor on your right to write python code. 
-In this exercise you must assign a value to a variable and print
+You can use the input() function to obtain input from the user. This can be very useful in many applications and is the fundamental way to interact and obtain information from the user.
+- Which of the following calls the input function with context and assigns the result to a variable?
 
 `@hint`
-Put some text in between the two double quotes to create a string that is assigned to variable. 
-Then put 'variable' in the print statement
+- The string inside of the input function is the context.
 
-`@pre_exercise_code`
-```{python}
+`@possible_answers`
+- [var = input("This is taking input from the user, type something: ")]
+- input("This is taking input from the user, type something: ")
+- var = input()
 
-```
-
-`@sample_code`
-```{python}
-#Assign a value to this variable. You can put text in the double quotes or remove double quotes and put a number.
-variable = ""
-#Put the name of the variable inside the print parentheses to call it in a print statement.
-print()
-```
-
-`@solution`
-```{python}
-variable = "This is a string, anything can go here"
-print(variable)
-```
-
-`@sct`
-```{python}
-Ex().check_object("variable")
-Ex().check_function('print')
-success_msg("Good Job!")
-```
+`@feedback`
+- Perfect!
+- Incorrect.
+- Incorrect.
 
 ---
 
@@ -409,8 +389,8 @@ The following are reserved words in python. Reserved words are words that have s
 
 `@possible_answers`
 - print("and del global")
-- [and = str1 + str2]
-- while true:
+- [and = 3 + 4]
+- if 1: print("hello")
 
 `@hint`
 - This goes the same with all programming languages, you should avoid using reserved words for anything other than their purpose at all costs. They should not be used for naming variables or functions.
@@ -477,4 +457,4 @@ When you create an assignment statement, you are assigning a value to a variable
 `@feedback`
 - Incorrect.
 - Incorrect.
-- Perfect!
+- Perfect! That concludes chapter 2!

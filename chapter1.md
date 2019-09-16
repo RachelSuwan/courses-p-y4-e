@@ -30,39 +30,88 @@ A boolean is a binary variable, having two states
 
 ---
 
-## If Statements
+## Passive Command of If Statement
 
 ```yaml
-type: MultipleChoiceExercise
-key: 67eb4e961e
+type: PureMultipleChoiceExercise
+key: 77d0fcb759
 xp: 50
 ```
 
 In an *if statement*, if the logical condition is true, then the indented code gets executed. If the logical condition is false, the indented statement is skipped.
->Which if statement will be executed if x = 10?
+<br>
+<b>Which if statement will be executed if x = 10?</b>
+	<br>
 - if x < 5 :
-	&nbsp; 
-    print('Hello')
+	<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('Hello')
+    <br>
 - if x > 10 :
-	print('World')
+	<br>
+	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('World')
+    <br>
 - if x < 15 :
-	print('!');
-
-`@possible_answers`
-
+	<br> 
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('!')
 
 `@hint`
-Test each 'if' statement in the console window
+replace x with 10 in each statement, does this make the statement true or false?
+
+`@possible_answers`
+- print('Hello')
+- print('World')
+- [print('!')]
+
+`@feedback`
+- Incorrect. x = 10, 10 is not less than 5. This makes the logical condition false, so print('Hello') will not execute
+- Incorrect. x = 10, The comparison operator > does not include 10. This makes the logical condition false, so print('World') will not execute
+- Correct! x = 10, 10 is less than 15. This makes the logical condition true, so print('!') will execute
+
+---
+
+## Active Command of the If Pattern
+
+```yaml
+type: NormalExercise
+key: 1b9cfac45c
+xp: 100
+```
+
+Terry is providing apples to a friend. Her friend needs exactly 8 apples.
+
+`@instructions`
+Create 3 If Statements with the variable apples.
+- the first statement should let her know she has not enough apples with output "not enough"
+- the second statement should let her know she has enough apples with output "enough"
+- the third statement should let her know she has more than enough apples with output "more than enough"
+
+`@hint`
+- Define a variable called apples and assign the value 8
+- create an if statement with the condition that apples less than 8
+- create an if statement with the condition that apples are equal to 8
+- create an if statement with the condition that apples are greater than 8
 
 `@pre_exercise_code`
 ```{python}
-x=10
+
+```
+
+`@sample_code`
+```{python}
+
+```
+
+`@solution`
+```{python}
+apples = 8
+if(apples<8):
+  	print('not enough')
+
 ```
 
 `@sct`
 ```{python}
-Ex().has_chosen(correct=3, msgs= [
-  "Incorrect. x = 10, 10 is not less than 5. This makes the logical condition false, so print('Hello') will not execute.",
-  "Incorrect. x = 10, The comparison operator > does not include 10. This makes the logical condition false, so print('World') will not execute.",
-  "Correct! x = 10, 10 is less than 15. This makes the logical condition true, so print('!') will execute."])
+Ex().check_object("apples").has_equal_value()
+Ex().check_ifs()
+success_msg("correct, apples = 8")
 ```

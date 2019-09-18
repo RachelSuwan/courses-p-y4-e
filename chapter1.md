@@ -111,5 +111,13 @@ if(apples<8):
 
 `@sct`
 ```{python}
+#Ex().check_object("apples").has_equal_value()
+#Ex().check_ifs(0).has_equal_output(incorrect_msg = "no")
+#success_msg("correct, apples = 8")
 
+Ex().check_if_else(){
+    check_cond(.) check_code()
+    check_if(.)check_function("print").check_arg("x").check_equal(<8)
+}
+success_msg("correct, apples = 8")
 ```

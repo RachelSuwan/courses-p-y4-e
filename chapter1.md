@@ -111,7 +111,5 @@ if(apples<8):
 
 `@sct`
 ```{python}
-Ex().check_object("apples").has_equal_value()
-Ex().check_ifs()
-success_msg("correct, apples = 8")
+
 ```

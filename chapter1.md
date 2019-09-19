@@ -115,9 +115,6 @@ if(apples<8):
 #Ex().check_ifs(0).has_equal_output(incorrect_msg = "no")
 #success_msg("correct, apples = 8")
 
-Ex().check_if_else(){
-    check_cond(.) check_code()
-    check_if(.)check_function("print").check_arg("x").check_equal(<8)
-}
+Ex().check_ifs(0).has_equal_output(incorrect_msg = "no")
 success_msg("correct, apples = 8")
 ```

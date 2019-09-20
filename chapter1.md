@@ -77,7 +77,7 @@ key: 1b9cfac45c
 xp: 100
 ```
 
-Terry is providing apples to a friend. Her friend needs exactly 8 apples.
+Terry is providing apples to a friend. Her friend needs exactly 8 apples. Help Terry determine if she has enough apples. 
 
 `@instructions`
 Create 3 If Statements with the variable apples.
@@ -86,14 +86,13 @@ Create 3 If Statements with the variable apples.
 - the third statement should let her know she has more than enough apples with output "more than enough"
 
 `@hint`
-- Define a variable called apples and assign the value 8
-- create an if statement with the condition that apples less than 8
-- create an if statement with the condition that apples are equal to 8
-- create an if statement with the condition that apples are greater than 8
+- Create an if statement with the condition that apples less than 8
+- Create an if statement with the condition that apples are equal to 8
+- Create an if statement with the condition that apples are greater than 8
 
 `@pre_exercise_code`
 ```{python}
-
+apples = 9
 ```
 
 `@sample_code`
@@ -103,18 +102,32 @@ Create 3 If Statements with the variable apples.
 
 `@solution`
 ```{python}
-apples = 8
-if(apples<8):
+#statement 0
+if apples<8:
   	print('not enough')
+#statement 1
+if apples==8:
+  	print('enough')
+#statement 2
+if apples>8:
+  	print('more than enough')
 
 ```
 
 `@sct`
 ```{python}
-#Ex().check_object("apples").has_equal_value()
-#Ex().check_ifs(0).has_equal_output(incorrect_msg = "no")
-#success_msg("correct, apples = 8")
+#assign if statements
+if_statement0 = Ex().check_if_else(0)
+if_statement1 = Ex().check_if_else(1)
+if_statement2 = Ex().check_if_else(2)
 
-Ex().check_ifs(0).has_equal_output(incorrect_msg = "no")
-success_msg("correct, apples = 8")
+if_statement0.check_test().has_equal_value()
+if_statement0.check_body().has_equal_output()
+if_statement1.check_test().has_equal_value()
+if_statement1.check_body().has_equal_output()
+if_statement2.check_test().has_equal_value()
+if_statement2.check_body().has_equal_output()
+
+success_msg("correct, since apples = 9 Terry has more than enough apples")
+
 ```

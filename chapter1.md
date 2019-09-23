@@ -117,9 +117,9 @@ if apples>8:
 `@sct`
 ```{python}
 #assign if statements
-if_statement1 = Ex().check_if_else(0)
-if_statement2 = Ex().check_if_else(1)
-if_statement3 = Ex().check_if_else(2)
+if_statement1 = Ex().check_if_else(0,missing_msg="First if statement not found.")
+if_statement2 = Ex().check_if_else(1,missing_msg="Second if statement not found.")
+if_statement3 = Ex().check_if_else(2,missing_msg="Third if statement not found.")
 
 if_statement1.check_test().has_equal_ast()
 if_statement1.check_body().has_equal_output()

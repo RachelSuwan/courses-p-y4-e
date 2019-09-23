@@ -86,9 +86,9 @@ Create 3 If Statements with the variable apples (it has been pre-defined).
 3. the third statement should let her know she has more than enough apples with output <b>"more than enough"</b>
 
 `@hint`
-1. Create an if statement with the condition that apples are less than 8 and uses the print function to create an output
-2. Create an if statement with the condition that apples are equal to 8 and uses the print function to create an output
-3. Create an if statement with the condition that apples are greater than 8 and uses the print function to create an output
+- Create an if statement with the condition that apples are less than 8 and uses the print function to create an output
+- Create an if statement with the condition that apples are equal to 8 and uses the print function to create an output
+- Create an if statement with the condition that apples are greater than 8 and uses the print function to create an output
 
 `@pre_exercise_code`
 ```{python}

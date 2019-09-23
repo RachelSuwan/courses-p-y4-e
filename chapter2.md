@@ -304,7 +304,7 @@ key: 7acd5bf8a4
 xp: 100
 ```
 
-Lets say you have two separate strings str1 and str2. str1 is defined as "This is con" and str2 is defined as "catenating strings together". If you want to combine these two strings you can accomplish this through concatenation. You can do this using the + operator with two strings. 
+Lets say you have two separate strings str1 and str2. str1 is defined as "This is con" and str2 is defined as "catenating strings together". If you want to combine these two strings you can accomplish this through concatenation. You can do this using the + operator with two strings.
 
 `@instructions`
 - Create a str3 that is the concatenation of these two strings

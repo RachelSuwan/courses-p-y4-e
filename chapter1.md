@@ -77,7 +77,7 @@ key: 1b9cfac45c
 xp: 100
 ```
 
-Terry is providing apples to a friend. Her friend needs exactly 8 apples. Help Terry determine if she has enough apples. 
+Terry is providing apples to a friend. Her friend needs exactly 8 apples. Help Terry determine if she has enough apples.
 
 `@instructions`
 Create 3 If Statements with the variable apples.

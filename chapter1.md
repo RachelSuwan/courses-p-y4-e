@@ -80,15 +80,15 @@ xp: 100
 Terry is providing apples to a friend. Her friend needs exactly 8 apples. Help Terry determine if she has enough apples.
 
 `@instructions`
-Create 3 If Statements with the variable apples.
-- the first statement should let her know she has not enough apples with output "not enough"
-- the second statement should let her know she has enough apples with output "enough"
-- the third statement should let her know she has more than enough apples with output "more than enough"
+Create 3 If Statements with the variable apples (it has been pre-defined).
+1. the first statement should let her know she has not enough apples with output <b>"not enough"</b>
+2. the second statement should let her know she has enough apples with output <b>"enough"</b>
+3. the third statement should let her know she has more than enough apples with output <b>"more than enough"</b>
 
 `@hint`
-- Create an if statement with the condition that apples less than 8
-- Create an if statement with the condition that apples are equal to 8
-- Create an if statement with the condition that apples are greater than 8
+1. Create an if statement with the condition that apples are less than 8 and uses the print function to create an output
+2. Create an if statement with the condition that apples are equal to 8 and uses the print function to create an output
+3. Create an if statement with the condition that apples are greater than 8 and uses the print function to create an output
 
 `@pre_exercise_code`
 ```{python}
@@ -102,13 +102,13 @@ apples = 9
 
 `@solution`
 ```{python}
-#statement 0
+#statement 1
 if apples<8:
   	print('not enough')
-#statement 1
+#statement 2
 if apples==8:
   	print('enough')
-#statement 2
+#statement 3
 if apples>8:
   	print('more than enough')
 
@@ -117,17 +117,19 @@ if apples>8:
 `@sct`
 ```{python}
 #assign if statements
-if_statement0 = Ex().check_if_else(0)
-if_statement1 = Ex().check_if_else(1)
-if_statement2 = Ex().check_if_else(2)
+if_statement1 = Ex().check_if_else(0)
+if_statement2 = Ex().check_if_else(1)
+if_statement3 = Ex().check_if_else(2)
 
-if_statement0.check_test().has_equal_value()
-if_statement0.check_body().has_equal_output()
-if_statement1.check_test().has_equal_value()
+if_statement1.check_test().has_equal_ast()
 if_statement1.check_body().has_equal_output()
-if_statement2.check_test().has_equal_value()
+
+if_statement2.check_test().has_equal_ast()
 if_statement2.check_body().has_equal_output()
 
-success_msg("correct, since apples = 9 Terry has more than enough apples")
+if_statement3.check_test().has_equal_ast()
+if_statement3.check_body().has_equal_output()
+
+success_msg("Correct! Since apples = 9, Terry has more than enough apples to give to her friend.")
 
 ```

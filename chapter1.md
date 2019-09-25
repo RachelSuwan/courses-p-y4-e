@@ -80,7 +80,7 @@ xp: 100
 Terry is providing apples to a friend. Her friend needs exactly 8 apples. Help Terry determine if she has enough apples.
 
 `@instructions`
-Create 3 If Statements with the variable apples (it has been pre-defined).
+Create 3 If Statements with the variable apples (apples has been pre-defined).
 1. the first statement should let her know she has not enough apples with output <b>"not enough"</b>
 2. the second statement should let her know she has enough apples with output <b>"enough"</b>
 3. the third statement should let her know she has more than enough apples with output <b>"more than enough"</b>
@@ -132,4 +132,74 @@ if_statement3.check_body().has_equal_output()
 
 success_msg("Correct! Since apples = 9, Terry has more than enough apples to give to her friend.")
 
+```
+
+---
+
+## Passive Command of If Else pattern
+
+```yaml
+type: PureMultipleChoiceExercise
+key: 0d93b556f0
+xp: 50
+```
+
+<!-- Guidelines for the question: https://instructor-support.datacamp.com/en/articles/2375516-course-multiple-choice-exercises. -->
+
+`@hint`
+<!-- Examples of good hints: https://instructor-support.datacamp.com/en/articles/2379164-hints-best-practices. -->
+- This is an example hint.
+- This is an example hint.
+
+`@possible_answers`
+- [Correct answer 1]
+- Wrong answer 2
+- Wrong answer 3
+
+`@feedback`
+<!-- Examples of good feedback messages: https://instructor-support.datacamp.com/en/articles/2299773-exercise-success-messages.  -->
+- Perfect!
+- Error message answer 2
+- Error message answer 3
+
+---
+
+## Active Command of If Else
+
+```yaml
+type: NormalExercise
+key: f23ee953dd
+xp: 100
+```
+
+<!-- Guidelines for contexts: https://instructor-support.datacamp.com/en/articles/2375526-course-coding-exercises. -->
+
+`@instructions`
+<!-- Guidelines for instructions https://instructor-support.datacamp.com/en/articles/2375526-course-coding-exercises. -->
+- Instruction 1
+- Instruction 2
+
+`@hint`
+<!-- Examples of good hints: https://instructor-support.datacamp.com/en/articles/2379164-hints-best-practices. -->
+- This is an example hint.
+- This is an example hint.
+
+`@pre_exercise_code`
+```{python}
+
+```
+
+`@sample_code`
+```{python}
+
+```
+
+`@solution`
+```{python}
+
+```
+
+`@sct`
+```{python}
+# Examples of good success messages: https://instructor-support.datacamp.com/en/articles/2299773-exercise-success-messages.
 ```

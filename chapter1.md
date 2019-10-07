@@ -340,10 +340,10 @@ else:
 Ex().check_if_else().multi(
     check_test().has_equal_ast(),          # zoom in on apples == 8
     check_body().has_equal_output(),          # zoom in on print("exactly 8 apples")
-    check_orelse().check_if_else(missing_msg="**elif statement or condition missing**").multi(
+    check_orelse().check_if_else().multi(
         check_test().has_equal_ast(),      # zoom in on apples < 8
-        check_body(missing_msg="print statement missing").has_equal_output(),      # zoom in on print("not enough apples")
-        check_orelse(missing_msg="print statement missing").has_equal_output()     # zoom in on print('more than enough')
+        check_body().has_equal_output(),      # zoom in on print("not enough apples")
+        check_orelse().has_equal_output()     # zoom in on print('more than enough')
     )
 )
 success_msg("Correct! Since apples = 4, Terry does not have enough apples to give to her friend.")

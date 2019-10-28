@@ -1,495 +1,460 @@
 ---
-title: 'Chapter 3 Conditional Execution'
-description: 'Introduction to Boolean Expressions and Logical Operations. We will also cover conditional execution and different kinds of conditionals.'
+title: 'Chapter 2 - Variables, expression and statements'
+description: 'In this module we will be covering the basics of programming languages. With a large focus on values, types, variables and operators. We will also cover the computer uses order of operations to make sense of the code.'
 ---
 
-## Boolean Expressions
+## 1.1 Data Types
 
 ```yaml
 type: PureMultipleChoiceExercise
-key: e8330433d0
+key: 1b28620609
 xp: 50
 ```
 
-A boolean expression is an expression that is:
+Determine the types of the following variables:
+1. 3.8
+2. 5
+3. "4.5"
 
 `@hint`
-A boolean is a binary variable, having two states
+Anything in quotes will be handled as a string of characters. Integers must be whole numbers.
 
 `@possible_answers`
-- right or wrong
-- [true or false]
-- high or low
-- beginning
+- string, integer, float
+- integer, float, string
+- [float, integer, string]
 
 `@feedback`
 - Incorrect
-- Correct! A boolean expression is an expression that is either true or false.
 - Incorrect
-- Incorrect
+- Correct
 
 ---
 
-## Passive Command of If Statement
+## 1.2 Data Types from Variables
 
 ```yaml
 type: PureMultipleChoiceExercise
-key: 77d0fcb759
+key: eae0b612d9
 xp: 50
 ```
 
-In an *if statement*, if the logical condition is true, then the indented code gets executed. If the logical condition is false, the indented statement is skipped.
-<b><br><u>Syntax:</u><br>if *condition*:
-     <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indented statement block to execute if condition is true
-<center>![](https://assets.datacamp.com/production/repositories/5344/datasets/cd23b394ceda286212bf220d957c39cd645d00d0/Blank%20Diagram.jpeg)</center>
-<br>
-><b>Which if statement will be executed if `x = 10?`</b>
-	<br>
-- if x < 5 :
-	<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('Hello')
-    <br>
-- if x > 10 :
-	<br>
-	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('World')
-    <br>
-- if x < 15 :
-	<br> 
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('!')
+What is the type of the data assigned to this variable.
+variable = '2.3'
 
 `@hint`
-replace x with 10 in each statement, does this make the statement true or false?
+The input is in quotes. Input in quotes can only be one type.
 
 `@possible_answers`
-- print('Hello')
-- print('World')
-- [print('!')]
+- float
+- [string]
+- integer
 
 `@feedback`
-- Incorrect. x = 10, 10 is not less than 5. This makes the logical condition false, so print('Hello') will not execute
-- Incorrect. x = 10, The comparison operator > does not include 10. This makes the logical condition false, so print('World') will not execute
-- Correct! x = 10, 10 is less than 15. This makes the logical condition true, so print('!') will execute
+- Incorrect. This answer would be correct if the input was not in quotes.
+- Correct! If input is ever assigned with quotes, then the input is a string type.
+- Incorrect. The input is in quotes and if it wasn't, it is not a whole number.
 
 ---
 
-## Active Command of the If Pattern
+## 1.3 Using type() to check the type of a variable
 
 ```yaml
 type: NormalExercise
-key: 1b9cfac45c
+key: 53889cf984
 xp: 100
 ```
 
-Terry is providing apples to a friend. Her friend needs exactly 8 apples. Help Terry determine if she has enough apples.
+Using the type function to show the type of something.
 
 `@instructions`
-Create 3 If Statements with the variable apples (apples has been pre-defined).
-1. the first statement should let her know she has not enough apples with output <b>"not enough"</b>
-2. the second statement should let her know she has enough apples with output <b>"enough"</b>
-3. the third statement should let her know she has more than enough apples with output <b>"more than enough"</b>
+>Assign a string, float, and integer to each of the variables. Order does not matter in this case.
 
 `@hint`
-- Syntax of the if statement consists of a header line that ends with a colon character (:) followed by an indented block.
-- Create an if statement with the condition that `apples<8` and uses the `print()` function to create an output
-- Create an if statement with the condition that `apples==8` and uses the `print()` function to create an output
-- Create an if statement with the condition that `apples>8` and uses the `print()` function to create an output
+- A string must be in quotes and an integer must be a whole number
 
 `@pre_exercise_code`
 ```{python}
-apples = 9
+
 ```
 
 `@sample_code`
 ```{python}
-
+var1 = 
+var2 = 
+var3 = 
+print(type(var1))
+print(type(var2))
+print(type(var3))
 ```
 
 `@solution`
 ```{python}
-#statement 1
-if apples<8:
-  	print('not enough')
-#statement 2
-if apples==8:
-  	print('enough')
-#statement 3
-if apples>8:
-  	print('more than enough')
+var1 = "string"
+var2 = 3.4
+var3 = 2
+print(type(var1))
+print(type(var2))
+print(type(var3))
+```
+
+`@sct`
+```{python}
+Ex().has_output("<class 'str'>", no_output_msg="Assign a string to the first variable")
+Ex().has_output("<class 'float'>", no_output_msg="Assign a float to the second variable")
+Ex().has_output("<class 'int'>", no_output_msg="Assign a integer to the third variable")
+success_msg("Good Job! As you can see from the output, the console handled each object based on what type of value you assigned to the variable.")
+```
+
+---
+
+## 1.4 Using int(), float(), and str() to convert variables
+
+```yaml
+type: NormalExercise
+key: e8df7b6d7f
+xp: 100
+```
+
+Converting variables to different types. Use the int(), float(), and str() methods to convert values to a specific type.
+
+`@instructions`
+This is useful for ensuring the proper type is assigned to a variable.
+You can either use these methods on the original values being assigned to the variables, or use the functions on the variables themselves and assign the result to the variables.
+>Apply these methods in the following order:
+- Apply int() to var1
+- Apply float() to var2
+- Apply str() to var3
+
+`@hint`
+- Call the variables inside of the int(), float() and str() methods and reassign to the variables:
+- Ex. var1 = int(var1)
+- Or you can do this in the original assignment:
+- Ex. var1 = int("4.7")
+
+`@pre_exercise_code`
+```{python}
+
+```
+
+`@sample_code`
+```{python}
+var1 = "4"
+var2 = "10.89"
+var3 = 5
+print("Variable 1 = ", var1)
+print("Variable 2 = ", var2)
+print("Variable 3 = ", var3)
+print(type(var1))
+print(type(var2))
+print(type(var3))
+```
+
+`@solution`
+```{python}
+var1 = int("4")
+var2 = float("10.89")
+var3 = str(5)
+print("Variable 1 = ", var1)
+print("Variable 2 = ", var2)
+print("Variable 3 = ", var3)
+print(type(var1))
+print(type(var2))
+print(type(var3))
+```
+
+`@sct`
+```{python}
+Ex().check_function('int', missing_msg="Use int() on a variable")
+Ex().check_function('float', missing_msg="Use float() on a variable")
+Ex().check_function('str', missing_msg="Use str() on a variable")
+Ex().has_printout(3, not_printed_msg="Use int() on a variable")
+Ex().has_printout(4, not_printed_msg="Use float() on a variable")
+Ex().has_printout(5, not_printed_msg="Use str() on a variable")
+success_msg("Good Job! These convert nicely, but you cannot convert a string that is not a number. However, you can convert almost anything to a string")
+```
+
+---
+
+## 1.5 Integer Division
+
+```yaml
+type: MultipleChoiceExercise
+key: 36abdba76e
+xp: 50
+```
+
+There are two ways to perform division with integers in python. You can use a single slash "/" or a double slash "//". The single will always perform true division and return a floating point number even when division with no remainder. A double slash performs what is called floor division. If you use floor division on a two integers you will get an integer back that is rounded down, if you use it on two floating point numbers it will round down to a whole number.
+> What is the result of the following operations? 
+Note: You can use the console on your right to test if unsure.
+- 5/2
+- 5//2
+- 10//6
+
+`@possible_answers`
+- 3, 2.5, 2
+- 2.0, 2, 2
+- [2.5, 2, 1]
+
+`@hint`
+You can test these by simply putting them into the python console and pressing enter. You will get the solutions.
+
+`@pre_exercise_code`
+```{python}
 
 ```
 
 `@sct`
 ```{python}
-#assign if statements
-if_statement1 = Ex().check_if_else(0,missing_msg="First if statement not found.")
-if_statement2 = Ex().check_if_else(1,missing_msg="Second if statement not found.")
-if_statement3 = Ex().check_if_else(2,missing_msg="Third if statement not found.")
-
-if_statement1.check_test().has_equal_ast()
-if_statement1.check_body().has_equal_output()
-
-if_statement2.check_test().has_equal_ast()
-if_statement2.check_body().has_equal_output()
-
-if_statement3.check_test().has_equal_ast()
-if_statement3.check_body().has_equal_output()
-
-success_msg("Correct! Since apples = 9, Terry has more than enough apples to give to her friend.")
+Ex().has_chosen(correct = 3, # 1-base indexed
+msgs = ["That's incorrect.",
+		"That's incorrect.",
+		"Correct! Head over to the next exercise!"])
 
 ```
 
 ---
 
-## Passive Command of If Else pattern
+## 1.6 Rules of Precedence
 
 ```yaml
-type: PureMultipleChoiceExercise
-key: 0d93b556f0
+type: MultipleChoiceExercise
+key: b535a2a8f5
 xp: 50
 ```
 
-A second form of the *if statement* is <b>alternative execution</b>. Whether the condition is true or false determines which possibility gets executed. One way to express a computation like that is a chained conditional. The alternatives are called branches, because they are branches in the flow of execution.
-<b><br><u>Syntax:</u><br>if *condition*:
-     <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indented statement block to execute if condition is true
-<br>else:
-  <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indented statement block to execute if condition above is false</b>
-  <center>![](https://assets.datacamp.com/production/repositories/5344/datasets/dc5447bef242d317aef551dac9fff72ccfdb5578/Else.jpeg)</center>
-<br>
-><b>In the following statement, which statement will execute if `x=4?`</b>
-	<br>
-    <br>
-if x != 10 :
-	<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('This is in the if statement')
-    <br>
-else:
-	<br>
-	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('This is in the else statement')
-    <br>
+When more than one operator appears in an expression, the order of evaluation depends on the rules of precedence. For mathematical operators, Python follows mathematical convention. The acronym _PEMDAS_ is a useful way to remember the rules:
+- Parenthesis
+- Exponents
+- Multiplication/Division
+- Addition/Subtraction
 
-`@hint`
--replace x with 4 in the if statement, does this make the statement true or false?
+
+>What are the result of the following equations? Feel free to use the console to test these problems
+- 3 ** 2 + 8 * 10
+- (5 + 3) * 2 ** 4
+- 6 + 4 / 2 * 8
 
 `@possible_answers`
-- The if statement
-- [The else statement]
-- Neither will execute
-
-`@feedback`
-- Incorrect. The else statement will execute only if `x=10`.
-- Correct! Since x=9, it does not equal 10. Thus, making the statement `x!=10` true. The if statement executes.
-- Incorrect. One of these statements will execute if `x=4`.
-
----
-
-## Active Command of If Else
-
-```yaml
-type: NormalExercise
-key: f23ee953dd
-xp: 100
-```
-
-Terry is providing apples to a friend. Her friend needs exactly 8 apples. Help Terry determine if she has enough apples.
-
-`@instructions`
-Create an if-else statement with the variable apples (apples has been pre-defined).
-1. The condition for the if statement should check if apples equals 8, and notify <b>"enough apples"</b>
-2. The else statement should notify <b>"not enough or too many"</b>
+- [89, 128, 22]
+ - 170, 128, 40
+ - 89, -128, 64
 
 `@hint`
-- Syntax of an if-else statement consists of:
-<br>1. an `if` header line that ends with a colon character (:) followed by an indented block
-<br>2. an `else` header line that ends with a colon character (:) followed by an indented block
-- Create an if statement with the condition that apples==8 and uses the` print()` function to notify "enough apples"
-- Create an else statement that uses the `print()` function to notify "not enough or too many"
+- Parentheses have the highest precedence and can be used to force an expression to evaluate in the order you want. Since expressions in parentheses are evaluated first, 2 * (3-1) is 4, and (1+1) ** (5-2) is 8.
+-  Exponentiation has the next highest precedence, so 2 * 1+1 is 3, not 4, and 3 * 1 ** 3 is 3, not 27.
+-  Multiplication and Division have the same precedence, which is higher than Addition and Subtraction, which also have the same precedence. So 2 * 3-1 is 5, not 4, and 6+4/2 is 8, not 5.
+-  Operators with the same precedence are evaluated from left to right. So the expression 5-3-1 is 1, not 3, because the 5-3 happens first and then 1 is subtracted from 2.
 
 `@pre_exercise_code`
 ```{python}
-apples = 20
-```
 
-`@sample_code`
-```{python}
-
-```
-
-`@solution`
-```{python}
-if apples == 8:
-  	print("enough apples")
-else:
-	print("not enough or too many")
 ```
 
 `@sct`
 ```{python}
-#assign if statements
-if_statement = Ex().check_if_else(0,missing_msg="if statement not found.")
-
-if_statement.check_test().has_equal_ast()
-if_statement.check_body().has_equal_output()
-if_statement.check_orelse().has_equal_output()
-success_msg("Correct! Since apples = 20, the else statement executes.")
+Ex().has_chosen(correct = 1, # 1-base indexed
+msgs = ["Correct! Head over to the next exercise!",
+		"That's incorrect.",
+        "That's incorrect."])
 ```
 
 ---
 
-## Passive Command of the if elif pattern
+## 1.7 Using Commas for Integers
 
 ```yaml
-type: PureMultipleChoiceExercise
-key: 794c390943
+type: MultipleChoiceExercise
+key: 3f86c48973
 xp: 50
 ```
 
-Sometimes there are more than two possibilities and we need more than two branches. One way to express a computation like that is a chained conditional. An *elif statement*, an abbreviation of “else if”, is a chained conditional that handles more than two branches. There is no limit to the number of elif statements and an else statement is not required to follow. 
-<b><br><u>Syntax:</u><br>if *condition*:
-     <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indented statement block to execute if first condition is true
-<br>elif *condition*:
-      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indented statement block to execute if first condition is false and second condition is true
-<br>else:
-  <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default statement block to execute if all conditions above are false</b>
-  <center>![](https://assets.datacamp.com/production/repositories/5344/datasets/d2881a9a5d9452951ac180cca33b7c668f39d57f/Elif.jpeg)</center>
-<br>
->Which of the following displays proper `elif` syntax?
-
-`@hint`
-There is no limit to the number of `elif` statements. An `else` statement will go <b>after</b> any `elif` statements however, an `else` statement is not mandatory.
+In this exercise we will be investigating what happens when you use commas for large numbers. Use the console on the right to see how python interprets commas and see what the result of typing this in the console: 1,203,000
 
 `@possible_answers`
-- if x==2:
-<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('This is in the if statement')
-<br>
-else:
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('This is in the else statement')
-<br>
-- if x==2:
-<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('This is in the if statement')
-<br>
-else:
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('This is in the else statement')
-<br>
-elif x==4:
-<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('This is in the else statement')
-<br>
-- [if x==2: <br>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('This is in the if statement')<br>elif x==4:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('This is in the elif statement')<br>elif x==6:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('This is in another elif statement')<br>]
-
-`@feedback`
-- Incorrect. This is correct syntax for an if-else statement, not an elif statement.
-- Incorrect. The elif statement must come before the else statement.
-- Correct!
-
----
-
-## Active Command of the if elif pattern
-
-```yaml
-type: NormalExercise
-key: a0a270e308
-xp: 100
-```
-
-Terry is providing apples to a friend. Her friend needs exactly 8 apples. Help Terry determine if she has enough apples.
-
-`@instructions`
-Create an if-elif-else statement with the variable apples (apples has been pre-defined).
-1. the `if statement` should let her know she has exactly enough apples with output <b>"exactly 8 apples"</b>
-2. the `elif statement` should let her know she does not have enough apples with output <b>"not enough"</b>
-3. the `else statement` should let her know she has more than enough apples with output <b>"more than enough"</b>
-
-`@hint`
-- Syntax of an if-elif statement consists of:
-<br>1. an `if` header line that ends with a colon character (:) followed by an indented block
-<br>2. an `elif` header line that ends with a colon character (:) followed by an indented block
-<br>3. an `else` header line that ends with a colon character (:) followed by an indented block
-- Create an if statement with the condition that apples==8 and uses the` print()` function to notify "exactly 8 apples"
-- Create an elif statement with the condition that apples<8 that uses the `print()` function to notify "not enough"
-- Create an else statement that uses the `print()` function to notify "more than enough"
-
-`@pre_exercise_code`
-```{python}
-apples = 4
-```
-
-`@sample_code`
-```{python}
-
-```
-
-`@solution`
-```{python}
-if apples == 8:
-  print("exactly 8 apples")
-elif apples < 8:
-  print("not enough apples")
-else:
-  print("more than enough ")
-```
-
-`@sct`
-```{python}
-#assign if statements
-#elif-else SCT
-
-Ex().check_if_else().multi(
-    check_test().has_equal_ast(),          # zoom in on apples == 8
-    check_body().has_equal_output(),          # zoom in on print("exactly 8 apples")
-    check_orelse().check_if_else().multi(
-        check_test().has_equal_ast(),      # zoom in on apples < 8
-        check_body().has_equal_output(),      # zoom in on print("not enough apples")
-        check_orelse().has_equal_output()     # zoom in on print('more than enough')
-    )
-)
-success_msg("Correct! Since apples = 4, Terry does not have enough apples to give to her friend.")
-
-```
-
----
-
-## Insert exercise title here
-
-```yaml
-type: PureMultipleChoiceExercise
-key: 1e4c0f9c28
-xp: 50
-```
-
-<!-- Guidelines for the question: https://instructor-support.datacamp.com/en/articles/2375516-course-multiple-choice-exercises. -->
+- [(1, 203, 0)]
+- 1,203,000
+- 1203000
 
 `@hint`
 <!-- Examples of good hints: https://instructor-support.datacamp.com/en/articles/2379164-hints-best-practices. -->
-- This is an example hint.
-- This is an example hint.
+- Use the console to test the number.
+
+`@pre_exercise_code`
+```{python}
+
+```
+
+`@sct`
+```{python}
+# Check https://instructor-support.datacamp.com/en/articles/2375523-course-multiple-choice-with-console-exercises on how to write feedback messages for this exercise.
+Ex().has_chosen(correct = 1, # 1-base indexed
+msgs = ["Correct! Head over to the next exercise!",
+		"That's incorrect.",
+        "That's incorrect."])
+```
+
+---
+
+## 1.8 Concatenating Strings
+
+```yaml
+type: NormalExercise
+key: 7acd5bf8a4
+xp: 100
+```
+
+Lets say you have two separate strings str1 and str2. str1 is defined as "This is con" and str2 is defined as "catenating strings together". If you want to combine these two strings you can accomplish this through concatenation. You can do this using the + operator with two strings.
+
+`@instructions`
+- Create a str3 that is the concatenation of these two strings
+- Print str3
+
+`@hint`
+- Str3 should look something like String 1 + String 2.
+
+`@pre_exercise_code`
+```{python}
+
+```
+
+`@sample_code`
+```{python}
+str1 = "This is con"
+str2 = "catenating strings together"
+str3 = 
+print()
+```
+
+`@solution`
+```{python}
+str1 = "This is con"
+str2 = "catenating strings together"
+str3 = (str1 + str2)
+print(str3)
+```
+
+`@sct`
+```{python}
+Ex().check_object("str3").has_equal_value()
+Ex().check_function("print")
+success_msg("Good Job!")
+```
+
+---
+
+## 1.9 Taking Input from the User
+
+```yaml
+type: PureMultipleChoiceExercise
+key: 4de213f542
+xp: 50
+```
+
+You can use the input() function to obtain input from the user. This can be very useful in many applications and is the fundamental way to interact and obtain information from the user.
+- Which of the following calls the input function with context and assigns the result to a variable?
+
+`@hint`
+- The string inside of the input function is the context.
 
 `@possible_answers`
-- [Correct answer 1]
-- Wrong answer 2
-- Wrong answer 3
+- [var = input("This is taking input from the user, type something: ")]
+- input("This is taking input from the user, type something: ")
+- var = input()
 
 `@feedback`
-<!-- Examples of good feedback messages: https://instructor-support.datacamp.com/en/articles/2299773-exercise-success-messages.  -->
 - Perfect!
-- Error message answer 2
-- Error message answer 3
+- Incorrect.
+- Incorrect.
 
 ---
 
-## Insert exercise title here
+## 1.10 Reserved Words
 
 ```yaml
-type: NormalExercise
-key: ae8db49405
-xp: 100
-```
-
-<!-- Guidelines for contexts: https://instructor-support.datacamp.com/en/articles/2375526-course-coding-exercises. -->
-
-`@instructions`
-<!-- Guidelines for instructions https://instructor-support.datacamp.com/en/articles/2375526-course-coding-exercises. -->
-- Instruction 1
-- Instruction 2
-
-`@hint`
-<!-- Examples of good hints: https://instructor-support.datacamp.com/en/articles/2379164-hints-best-practices. -->
-- This is an example hint.
-- This is an example hint.
-
-`@pre_exercise_code`
-```{python}
-
-```
-
-`@sample_code`
-```{python}
-
-```
-
-`@solution`
-```{python}
-
-```
-
-`@sct`
-```{python}
-# Examples of good success messages: https://instructor-support.datacamp.com/en/articles/2299773-exercise-success-messages.
-```
-
----
-
-## Passive Try Except
-
-```yaml
-type: PureMultipleChoiceExercise
-key: ab9f768191
+type: MultipleChoiceExercise
+key: 439989930c
 xp: 50
 ```
 
-Input from a user can potentially cause errors. A conditional execution structure that handles both expected and unexpected errors is called try/except. The try block tries a statement that may have issues, the except is executed if an error occurs in the statement and is ignored if there are no errors. 
-<b><br><u>Syntax:</u><br>try:
-     <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indented statement block to execute
-<br>except:
-  <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Indented statement block to execute if condition above has an error</b>
-
-`@hint`
-<!-- Examples of good hints: https://instructor-support.datacamp.com/en/articles/2379164-hints-best-practices. -->
-- This is an example hint.
-- This is an example hint.
+The following are reserved words in python. Reserved words are words that have specific uses and functions in python. Python's interpreter will always use these words as a way to accomplish a specific task:
+- and & del & global & not & with
+- as & elif & if & or & yield
+- assert & else & import  & pass
+- break & except & in & raise
+- class & finally & is & return
+- continue & for & lambda & try
+- def & from & nonlocal & while
+> Which of the following is a bad use case of reserved words?
 
 `@possible_answers`
-- [Correct answer 1]
-- Wrong answer 2
-- Wrong answer 3
-
-`@feedback`
-<!-- Examples of good feedback messages: https://instructor-support.datacamp.com/en/articles/2299773-exercise-success-messages.  -->
-- Perfect!
-- Error message answer 2
-- Error message answer 3
-
----
-
-## Active Try Except
-
-```yaml
-type: NormalExercise
-key: 7e8c31a99b
-xp: 100
-```
-
-<!-- Guidelines for contexts: https://instructor-support.datacamp.com/en/articles/2375526-course-coding-exercises. -->
-
-`@instructions`
-<!-- Guidelines for instructions https://instructor-support.datacamp.com/en/articles/2375526-course-coding-exercises. -->
-- Instruction 1
-- Instruction 2
+- print("and del global")
+- [and = 3 + 4]
+- if 1: print("hello")
 
 `@hint`
-<!-- Examples of good hints: https://instructor-support.datacamp.com/en/articles/2379164-hints-best-practices. -->
-- This is an example hint.
-- This is an example hint.
+- This goes the same with all programming languages, you should avoid using reserved words for anything other than their purpose at all costs. They should not be used for naming variables or functions.
 
 `@pre_exercise_code`
 ```{python}
 
 ```
 
-`@sample_code`
-```{python}
-
-```
-
-`@solution`
-```{python}
-
-```
-
 `@sct`
 ```{python}
-# Examples of good success messages: https://instructor-support.datacamp.com/en/articles/2299773-exercise-success-messages.
+Ex().has_chosen(correct = 2, # 1-base indexed
+msgs = ["That's incorrect.",
+        "Correct! Head over to the next exercise!",
+        "That's incorrect."])
 ```
+
+---
+
+## 1.11 Mnemonic Naming
+
+```yaml
+type: PureMultipleChoiceExercise
+key: 88deb6c654
+xp: 50
+```
+
+Programmers use mnemonic naming to allow the programmer to have a easier time understanding and remembering the use of functions. By creating a name that simply identifies the function we are able to read through code and remember what our code does when we create big projects with lots of code and functions. 
+- What is an example of both mnemonic and non-mnemonic naming conventions from the following?
+
+`@hint`
+- Mnemonic is more specific to the function whereas non-mnemonic is the opposite
+
+`@possible_answers`
+- [pizza = print("this is a pizza"); function2 = print("This is a hamburger")]
+- function1 = print("this is a pizza"); function2 = print("This is a hamburger")
+- pizza = print("this is a pizza"); burger = print("This is a hamburger")
+
+`@feedback`
+- That's Correct!
+- That is an example of two non-mnemonic names for functions
+- That is an example of two mnemonic names for functions
+
+---
+
+## 1.12 Components of an Assignment Statement
+
+```yaml
+type: PureMultipleChoiceExercise
+key: e423dea2b7
+xp: 50
+```
+
+When you create an assignment statement, you are assigning a value to a variable through an operand like an "=". What is the order of the three components of an assignment statement?
+
+`@hint`
+- There is a value, a variable and an operand
+
+`@possible_answers`
+- value, operand, variable
+- name, equals, value
+- [variable, operand, value]
+
+`@feedback`
+- Incorrect.
+- Incorrect.
+- Perfect! That concludes chapter 2!

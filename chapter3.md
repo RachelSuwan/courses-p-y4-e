@@ -66,7 +66,7 @@ function1("Hello")
 ```{python}
 # Examples of good success messages: https://instructor-support.datacamp.com/en/articles/2299773-exercise-success-messages.
 Ex().check_function("function1", missing_msg="Make sure function1 is properly defined and called")
-Ex().has_output("Hello", incorrect_msg="Make sure the print output is 'Hello')
+Ex().has_output("Hello", incorrect_msg="Make sure the print output is 'Hello'")
 success_msg("Good Job! Parameters are optional and you can have more than one or none at all.")
 ```
 
@@ -196,4 +196,182 @@ Ex().check_function_def("function1", missing_msg="Define function 1")
 Ex().check_function_def("function2", missing_msg="Define function 2")
 Ex().has_output("function1")
 success_msg('Good Job! As you can see from the output, only function1 had its print statement called')
+```
+
+---
+
+## Parameters
+
+```yaml
+type: NormalExercise
+key: 627fdf6786
+xp: 100
+```
+
+<!-- Guidelines for contexts: https://instructor-support.datacamp.com/en/articles/2375526-course-coding-exercises. -->
+In this exercise, we will show how to work with multiple parameters in a function and demonstrate different ways to call functions. 
+
+`@instructions`
+<!-- Guidelines for instructions https://instructor-support.datacamp.com/en/articles/2375526-course-coding-exercises. -->
+- Call the function provided with the two variables with p1 in param1 and p2 in param2.
+- Call it again with the two variables switched.
+- Call it one more time with "printFunction(param2 = p1, param1 = p2)"
+
+`@hint`
+<!-- Examples of good hints: https://instructor-support.datacamp.com/en/articles/2379164-hints-best-practices. -->
+- The first call should look like "printFunction(p1, p2)"
+
+`@pre_exercise_code`
+```{python}
+
+```
+
+`@sample_code`
+```{python}
+#Function definition
+def printFunction(param1, param2):
+  print("This is " + param1)
+  print("This is " + param2)
+  return;
+
+#Use these variables for ease of use
+p1 = "Parameter 1"
+p2 = "Parameter 2"
+
+
+```
+
+`@solution`
+```{python}
+#Function definition
+def printFunction(param1, param2):
+  print("This is " + param1)
+  print("This is " + param2)
+  return;
+
+#Some variables to work with
+p1 = "Parameter 1"
+p2 = "Parameter 2"
+
+printFunction(p1, p2)
+printFunction(p2, p1)
+printFunction(param2 = p1, param1 = p2)
+```
+
+`@sct`
+```{python}
+# Examples of good success messages: https://instructor-support.datacamp.com/en/articles/2299773-exercise-success-messages.
+Ex().check_function("printFunction", 0).multi(
+  check_args(0).has_equal_value(),
+  check_args(1).has_equal_value()
+)
+Ex().check_function("printFunction", 1).multi(
+  check_args(0).has_equal_value(),
+  check_args(1).has_equal_value()
+)
+Ex().check_function("printFunction", 2).multi(
+  check_args(0).has_equal_value(),
+  check_args(1).has_equal_value()
+)
+success_msg("Good Job! As you can see from this exercise, order matters. When working with lots of parameters it can help to specify which one you are assigning.")
+```
+
+---
+
+## Void Functions and Return Statements
+
+```yaml
+type: NormalExercise
+key: ce0e10604e
+xp: 100
+```
+
+<!-- Guidelines for contexts: https://instructor-support.datacamp.com/en/articles/2375526-course-coding-exercises. -->
+Up until now, we have only worked with functions that do not return any value after being called. These are called void functions. In this exercise we will look at why returns are important.
+
+`@instructions`
+<!-- Guidelines for instructions https://instructor-support.datacamp.com/en/articles/2375526-course-coding-exercises. -->
+- Print voidFunction()
+- Print returnFunction()
+
+`@hint`
+<!-- Examples of good hints: https://instructor-support.datacamp.com/en/articles/2379164-hints-best-practices. -->
+- Put the function calls within a print statement, or assign the output from each function to a variable and print the variables. Both will work.
+
+`@pre_exercise_code`
+```{python}
+
+```
+
+`@sample_code`
+```{python}
+def voidFunction():
+  sum1 = 12 + 3
+  print("Inside voidFunction: " + str(sum1))
+  return;
+
+def returnFunction():
+  sum2 = 4 + 5
+  print("Inside returnFunction: " + str(sum2))
+  return sum2;
+```
+
+`@solution`
+```{python}
+def voidFunction():
+  sum1 = 12 + 3
+  print("Inside voidFunction: " + str(sum1))
+  return;
+
+def returnFunction():
+  sum2 = 4 + 5
+  print("Inside returnFunction: " + str(sum2))
+  return sum2;
+  
+print(voidFunction())
+print(returnFunction())
+```
+
+`@sct`
+```{python}
+# Examples of good success messages: https://instructor-support.datacamp.com/en/articles/2299773-exercise-success-messages.
+Ex().check_function("voidFunction")
+Ex().check_function("returnFunction")
+Ex().has_output("None")
+Ex().has_output("9")
+success_msg("Good Job! Return functions are very useful and are used just as often as void functions")
+```
+
+---
+
+## Why use Functions?
+
+```yaml
+type: MultipleChoiceExercise
+key: 272a72b66e
+xp: 50
+```
+
+<!-- Guidelines for the question: https://instructor-support.datacamp.com/en/articles/2375523-course-multiple-choice-with-console-exercises. -->
+Explain the use of functions in organizing a large program into smaller pieces with a well-defined
+purpose.
+
+`@possible_answers`
+- [Correct answer 1]
+- Wrong answer 2
+- Wrong answer 3
+
+`@hint`
+<!-- Examples of good hints: https://instructor-support.datacamp.com/en/articles/2379164-hints-best-practices. -->
+- This is an example hint.
+- This is an example hint.
+
+`@pre_exercise_code`
+```{python}
+
+```
+
+`@sct`
+```{python}
+# Check https://instructor-support.datacamp.com/en/articles/2375523-course-multiple-choice-with-console-exercises on how to write feedback messages for this exercise.
 ```

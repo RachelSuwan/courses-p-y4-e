@@ -65,8 +65,7 @@ function1("Hello")
 `@sct`
 ```{python}
 # Examples of good success messages: https://instructor-support.datacamp.com/en/articles/2299773-exercise-success-messages.
-Ex().check_function("function1", missing_msg="Make sure function1 is properly defined and called")
-Ex().has_output("Hello", incorrect_msg="Make sure the print output is 'Hello'")
+Ex().check_function("function1", missing_msg="Make sure function1 is properly defined and called").check_args(0).has_equal_value(incorrect_msg="Make sure the print output is 'Hello'")
 success_msg("Good Job! Parameters are optional and you can have more than one or none at all.")
 ```
 

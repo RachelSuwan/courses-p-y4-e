@@ -3,34 +3,7 @@ title: 'Chapter 3 - Conditional Execution'
 description: 'Introduction to Boolean Expressions and Logical Operations. We will also cover conditional execution and different kinds of conditionals.'
 ---
 
-## Boolean Expressions
-
-```yaml
-type: PureMultipleChoiceExercise
-key: e8330433d0
-xp: 50
-```
-
-A boolean expression is an expression that is:
-
-`@hint`
-A boolean is a binary variable, having two states
-
-`@possible_answers`
-- right or wrong
-- [true or false]
-- high or low
-- beginning
-
-`@feedback`
-- Incorrect
-- Correct! A boolean expression is an expression that is either true or false.
-- Incorrect
-- Incorrect
-
----
-
-## Passive Command of If Statement
+## 2.1 If Statements
 
 ```yaml
 type: PureMultipleChoiceExercise
@@ -72,7 +45,7 @@ replace x with 10 in each statement, does this make the statement true or false?
 
 ---
 
-## Active Command of the If Pattern
+## 2.2 Using the If Statement
 
 ```yaml
 type: NormalExercise
@@ -140,7 +113,7 @@ success_msg("Correct! Since apples = 9, Terry has more than enough apples to giv
 
 ---
 
-## Passive Command of If Else pattern
+## 2.3 If Else Statements
 
 ```yaml
 type: PureMultipleChoiceExercise
@@ -182,7 +155,7 @@ else:
 
 ---
 
-## Active Command of If Else
+## 2.4 Using If Else Statements
 
 ```yaml
 type: NormalExercise
@@ -235,7 +208,7 @@ success_msg("Correct! Since apples = 20, the else statement executes.")
 
 ---
 
-## Passive Command of the if elif pattern
+## 2.5 If Elif Statements
 
 ```yaml
 type: PureMultipleChoiceExercise
@@ -287,7 +260,7 @@ elif x==4:
 
 ---
 
-## Active Command of the if elif pattern
+## 2.6 Using If Elif Statements
 
 ```yaml
 type: NormalExercise
@@ -352,7 +325,7 @@ success_msg("Correct! Since apples = 4, Terry does not have enough apples to giv
 
 ---
 
-## Passive command of Nested Loops
+## 2.7 Nested Conditionals
 
 ```yaml
 type: PureMultipleChoiceExercise
@@ -360,27 +333,25 @@ key: 1e4c0f9c28
 xp: 50
 ```
 
-<!-- Guidelines for the question: https://instructor-support.datacamp.com/en/articles/2375516-course-multiple-choice-exercises. -->
+Conditionals can be nested within one another to create multiple branches of code. The first conditional determines subsequent conditional execution. There are often ways to avoid nested conditionals by combining logical operators.
+<center><img src="https://assets.datacamp.com/production/repositories/5344/datasets/3ee05cf4d52fba9b3c7fa7fe8adff5d2fd5b069e/Nested.jpeg" width="850"></center>
+>Select the conditional that best rewrites this nested loop:
+<br>if x < 20:
+<br>&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; if x > 10:
+<br> &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; print"x is a number between 10 and 20"
 
 `@hint`
-<!-- Examples of good hints: https://instructor-support.datacamp.com/en/articles/2379164-hints-best-practices. -->
-- This is an example hint.
-- This is an example hint.
+
 
 `@possible_answers`
-- [Correct answer 1]
-- Wrong answer 2
-- Wrong answer 3
+
 
 `@feedback`
-<!-- Examples of good feedback messages: https://instructor-support.datacamp.com/en/articles/2299773-exercise-success-messages.  -->
-- Perfect!
-- Error message answer 2
-- Error message answer 3
+
 
 ---
 
-## Passive Try Except
+## 2.8 Try Except
 
 ```yaml
 type: PureMultipleChoiceExercise
@@ -388,7 +359,7 @@ key: ab9f768191
 xp: 50
 ```
 
-Input from a user can potentially cause errors. A conditional execution structure that handles both expected and unexpected errors is called try/except. The try block tries a statement that may have issues, the except is executed if an error occurs in the statement and is ignored if there are no errors. 
+Input from a user can potentially cause errors. A conditional execution structure that handles both expected and unexpected errors is called try/except. The try block attempts to execute a statement that may have issues, the except is executed if an error occurs in the statement and is ignored if there are no errors. 
 <b><br><u>Syntax:</u><br>try:
      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indented statement block to execute
 <br>except:
@@ -412,7 +383,7 @@ Input from a user can potentially cause errors. A conditional execution structur
 
 ---
 
-## Active Try Except
+## 2.9 Using Try Except
 
 ```yaml
 type: NormalExercise

@@ -208,7 +208,7 @@ xp: 100
 ```
 
 <!-- Guidelines for contexts: https://instructor-support.datacamp.com/en/articles/2375526-course-coding-exercises. -->
-In this exercise, we will show how to work with multiple parameters in a function and demonstrate different ways to call functions.
+In this exercise, we will show how to work with multiple parameters in a function and demonstrate different ways to call functions. 
 
 `@instructions`
 <!-- Guidelines for instructions https://instructor-support.datacamp.com/en/articles/2375526-course-coding-exercises. -->
@@ -346,31 +346,33 @@ success_msg("Good Job! Return functions are very useful and are used just as oft
 ## Why use Functions?
 
 ```yaml
-type: MultipleChoiceExercise
-key: 272a72b66e
+type: PureMultipleChoiceExercise
+key: ba9c1ddbbb
 xp: 50
 ```
 
-<!-- Guidelines for the question: https://instructor-support.datacamp.com/en/articles/2375523-course-multiple-choice-with-console-exercises. -->
-Explain the use of functions in organizing a large program into smaller pieces with a well-defined
-purpose.
+<!-- Guidelines for the question: https://instructor-support.datacamp.com/en/articles/2375516-course-multiple-choice-exercises. -->
+In this chapter we have shown how to properly define and use functions. But, we have been applying them to very trivial ideas on a small scale. Here are some things to keep in mind:
+- Functions can be very useful to break up large blocks of code into smaller parts. 
+- They are also very useful for code that is repeated. If you ever find yourself repeating parts of code, try to use functions instead. 
+- A good way to look at libraries in programming languages is as a collection of pre-written functions, classes, values and subroutines that can be called to do a specific task.
+- Functions are very useful for coding but don't always need to be used for every bit of code, especially smaller programs.
 
-`@possible_answers`
-- [Correct answer 1]
-- Wrong answer 2
-- Wrong answer 3
+Which of the following is **NOT** true?
 
 `@hint`
 <!-- Examples of good hints: https://instructor-support.datacamp.com/en/articles/2379164-hints-best-practices. -->
-- This is an example hint.
-- This is an example hint.
+- Use the text above the question as your guide for below.
 
-`@pre_exercise_code`
-```{python}
+`@possible_answers`
+- Libraries are just a collection of pre-written functions, classes, values and subroutines.
+- Functions are useful for breaking up large blocks of code into smaller chunks.
+- [Functions should always be used when you are making a simple and small program.]
+- Functions are useful for getting rid of redundant code.
 
-```
-
-`@sct`
-```{python}
-# Check https://instructor-support.datacamp.com/en/articles/2375523-course-multiple-choice-with-console-exercises on how to write feedback messages for this exercise.
-```
+`@feedback`
+<!-- Examples of good feedback messages: https://instructor-support.datacamp.com/en/articles/2299773-exercise-success-messages.  -->
+- Libraries are in fact made up of pre-written code that can be called like functions.
+- Functions make code much more readable because you are routinely naming parts of your code.
+- Correct! Functions definitely can be used for small programs, but short programs don't always need functions.
+- If you put a redundant piece of code into a function instead, your code will be less lengthy.

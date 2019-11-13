@@ -208,7 +208,7 @@ xp: 100
 ```
 
 <!-- Guidelines for contexts: https://instructor-support.datacamp.com/en/articles/2375526-course-coding-exercises. -->
-In this exercise, we will show how to work with multiple parameters in a function and demonstrate different ways to call functions. 
+In this exercise, we will show how to work with multiple parameters in a function and demonstrate different ways to call functions.
 
 `@instructions`
 <!-- Guidelines for instructions https://instructor-support.datacamp.com/en/articles/2375526-course-coding-exercises. -->

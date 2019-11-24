@@ -1,1 +1,1 @@
-# courses-python-for-everybody
+# courses-python-pratice

@@ -2,6 +2,6 @@ title: Python Practice
 description: >-
   A python course for introductory programming skills. In this course you will
   learn the basic concepts of programming languages. This course is meant to
-  work in tandem with the Python for Everybody book by Charles Severance
+  work in tandem with the Python for Everybody book by Charles Severance.
 programming_language: python
 from: 'python-base-prod:v1.0.2'

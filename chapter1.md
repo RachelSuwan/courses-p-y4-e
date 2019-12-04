@@ -3,7 +3,7 @@ title: 'Chapter 2 - Variables, expression and statements'
 description: 'In this module we will be covering the basics of programming languages. With a large focus on values, types, variables and operators. We will also cover the computer uses order of operations to make sense of the code.'
 ---
 
-## 1.1 Data Types
+## Data Types
 
 ```yaml
 type: PureMultipleChoiceExercise
@@ -31,7 +31,7 @@ Anything in quotes will be handled as a string of characters. Integers must be w
 
 ---
 
-## 1.2 Data Types from Variables
+## Data Types from Variables
 
 ```yaml
 type: PureMultipleChoiceExercise
@@ -57,7 +57,7 @@ The input is in quotes. Input in quotes can only be one type.
 
 ---
 
-## 1.3 Using type() to check the type of a variable
+## Using type() to check the type of a variable
 
 ```yaml
 type: NormalExercise
@@ -108,7 +108,7 @@ success_msg("Good Job! As you can see from the output, the console handled each 
 
 ---
 
-## 1.4 Using int(), float(), and str() to convert variables
+## Using int(), float(), and str() to convert variables
 
 ```yaml
 type: NormalExercise
@@ -176,7 +176,7 @@ success_msg("Good Job! These convert nicely, but you cannot convert a string tha
 
 ---
 
-## 1.5 Integer Division
+## Integer Division
 
 ```yaml
 type: MultipleChoiceExercise
@@ -215,7 +215,7 @@ msgs = ["That's incorrect.",
 
 ---
 
-## 1.6 Rules of Precedence
+## Rules of Precedence
 
 ```yaml
 type: MultipleChoiceExercise
@@ -261,7 +261,7 @@ msgs = ["Correct! Head over to the next exercise!",
 
 ---
 
-## 1.7 Using Commas for Integers
+## Using Commas for Integers
 
 ```yaml
 type: MultipleChoiceExercise
@@ -296,7 +296,7 @@ msgs = ["Correct! Head over to the next exercise!",
 
 ---
 
-## 1.8 Concatenating Strings
+## Concatenating Strings
 
 ```yaml
 type: NormalExercise
@@ -343,7 +343,7 @@ success_msg("Good Job!")
 
 ---
 
-## 1.9 Taking Input from the User
+## Taking Input from the User
 
 ```yaml
 type: PureMultipleChoiceExercise
@@ -369,7 +369,7 @@ You can use the input() function to obtain input from the user. This can be very
 
 ---
 
-## 1.10 Reserved Words
+## Reserved Words
 
 ```yaml
 type: MultipleChoiceExercise
@@ -410,7 +410,7 @@ msgs = ["That's incorrect.",
 
 ---
 
-## 1.11 Mnemonic Naming
+## Mnemonic Naming
 
 ```yaml
 type: PureMultipleChoiceExercise
@@ -436,7 +436,7 @@ Programmers use mnemonic naming to allow the programmer to have a easier time un
 
 ---
 
-## 1.12 Components of an Assignment Statement
+## Components of an Assignment Statement
 
 ```yaml
 type: PureMultipleChoiceExercise

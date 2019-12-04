@@ -3,7 +3,7 @@ title: 'Chapter 3 - Conditional Execution'
 description: 'Introduction to Boolean Expressions and Logical Operations. We will also cover conditional execution and different kinds of conditionals.'
 ---
 
-## 2.1 If Statements
+## If Statements
 
 ```yaml
 type: PureMultipleChoiceExercise
@@ -45,7 +45,7 @@ replace x with 10 in each statement, does this make the statement true or false?
 
 ---
 
-## 2.2 Using the If Statement
+## Using the If Statement
 
 ```yaml
 type: NormalExercise
@@ -113,7 +113,7 @@ success_msg("Correct! Since apples = 9, Terry has more than enough apples to giv
 
 ---
 
-## 2.3 If Else Statements
+## If Else Statements
 
 ```yaml
 type: PureMultipleChoiceExercise
@@ -155,7 +155,7 @@ else:
 
 ---
 
-## 2.4 Using If Else Statements
+## Using If Else Statements
 
 ```yaml
 type: NormalExercise
@@ -208,7 +208,7 @@ success_msg("Correct! Since apples = 20, the else statement executes.")
 
 ---
 
-## 2.5 If Elif Statements
+## If Elif Statements
 
 ```yaml
 type: PureMultipleChoiceExercise
@@ -260,7 +260,7 @@ elif x==4:
 
 ---
 
-## 2.6 Using If Elif Statements
+## Using If Elif Statements
 
 ```yaml
 type: NormalExercise
@@ -325,7 +325,7 @@ success_msg("Correct! Since apples = 4, Terry does not have enough apples to giv
 
 ---
 
-## 2.7 Nested Conditionals
+## Nested Conditionals
 
 ```yaml
 type: PureMultipleChoiceExercise
@@ -355,7 +355,7 @@ Conditionals can be nested within one another to create multiple branches of cod
 
 ---
 
-## 2.8 Try Except
+## Try Except
 
 ```yaml
 type: PureMultipleChoiceExercise
@@ -363,19 +363,19 @@ key: ab9f768191
 xp: 50
 ```
 
-Input from a user can potentially cause errors. A conditional execution structure that handles both expected and unexpected errors is called try/except. The try block attempts to execute a statement that may have issues, the except is executed if an error occurs in the statement and is ignored if there are no errors. 
-<b><br><u>Syntax:</u><br>try:
+Input from a user can potentially cause errors. A conditional execution structure that handles both expected and unexpected errors is called try/except. The try block attempts to execute a statement that may have issues, the except is executed if an error occurs in the statement and is ignored if there are no errors. An optional finally can be added that will run regardless if an error has occurred or not.
+<b><br><u>Syntax:</u><br>try: 
      <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Indented statement block to execute
 <br>except:
-  <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Indented statement block to execute if condition above has an error</b>
+  <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Indented statement block to execute if code above has an error
+  <br>finally: (optional)
+  <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Indented statement block to execute regardless if code above has an error or not </b>
   
 > Identify a try/except statement that would handle errors in the following user input:
 <br><br> user_input = "Twenty"
 
 `@hint`
-<!-- Examples of good hints: https://instructor-support.datacamp.com/en/articles/2379164-hints-best-practices. -->
-- This is an example hint.
-- This is an example hint.
+
 
 `@possible_answers`
 - try:
@@ -392,120 +392,6 @@ Input from a user can potentially cause errors. A conditional execution structur
 <br>&nbsp;&nbsp;&nbsp; print"Enter Valid Age"
 
 `@feedback`
-<!-- Examples of good feedback messages: https://instructor-support.datacamp.com/en/articles/2299773-exercise-success-messages.  -->
-- expect is invalid syntax, this code will not compile
+- 'expect' is invalid syntax, this code will not compile
 - Correct! try/except is the correct syntax. Since the user_input was a string value, the except block will execute
 - tried/expected is invalid syntax, this code will not compile
-
----
-
-## Insert exercise title here
-
-```yaml
-type: DragAndDropExercise
-key: 6aba19dcff
-xp: 100
-```
-
-<!-- Guidelines for contexts: https://instructor-support.datacamp.com/en/articles/2375526-course-coding-exercises. -->
-
-`@instructions`
-<!-- Guidelines for instructions https://instructor-support.datacamp.com/en/articles/2375526-course-coding-exercises. -->
-- Instruction 1
-- Instruction 2
-
-`@hint`
-<!-- Examples of good hints: https://instructor-support.datacamp.com/en/articles/2379164-hints-best-practices. -->
-- This is an example hint.
-- This is an example hint.
-
-`@solution`
-```{python}
-# Edit or remove this code to create your own exercise.
-# This is 1 type of drag and drop exercise, there are 2 other types. See documentation:
-# http://instructor-support.datacamp.com/en/articles/3039539-course-drag-drop-exercises
-
-# Make sure you only use SPACES, NOT TABS in front of each line.
-
-# Drag zone that holds all the options.
-# Specify an ID for this zone to use in SCTs.
-- id: options
-  title: "Options" # Title of your zone This is not shown with more than 2 zones.
-
-# You can keep adding drop zones to sort to.
-# This example has 2 zones.
-- id: dropzone_r
-  title: "R"
-  items: # Each drop zone has a list of items it contains. These will be shown in a random fashion.
-    - content: "stringr" # Name of an item. Feel free to use markdown.
-      id: stringr # ID of the item. This can be used in the SCTs.
-    - content: "dplyr"
-      id: dplyr
-
-- id: dropzone_python
-  title: "Python"
-  items:
-    - content: "pandas"
-      id: pandas
-    - content: "numpy"
-      id: numpy
-      
-```
-
-`@sct`
-```{python}
-checks: # Individual checks and custom messages per item. This is optional. Without it, it will check that the options are as in the solution code.
-  - condition: check_target(pandas) == dropzone_python # Check that pandas is in dropzone_python.
-    incorrectMessage: 'Hmm! Pandas is a Python package.' # If that condition is not true, show this message.
-  - condition: check_target(numpy) == dropzone_python
-    incorrectMessage: 'Damn, this is far from perfect!'
-  - condition: check_target(dplyr) == dropzone_r
-    incorrectMessage: "Hmm, keep doing R courses! :-)"
-  - condition: check_target(stringr) == dropzone_r
-    incorrectMessage: "How funny if stringr would be a Python package."
-successMessage: "Congratulations" # Message shown when all is correct.
-failureMessage: "Try again!" # Message shown when there are errors (and there is no specific error available).
-isOrdered: false # Should the items in the zones be ordered as in the solution code?
-```
-
----
-
-## 2.9 Using Try Except
-
-```yaml
-type: NormalExercise
-key: 7e8c31a99b
-xp: 100
-```
-
-<!-- Guidelines for contexts: https://instructor-support.datacamp.com/en/articles/2375526-course-coding-exercises. -->
-
-`@instructions`
-<!-- Guidelines for instructions https://instructor-support.datacamp.com/en/articles/2375526-course-coding-exercises. -->
-- Instruction 1
-- Instruction 2
-
-`@hint`
-<!-- Examples of good hints: https://instructor-support.datacamp.com/en/articles/2379164-hints-best-practices. -->
-- This is an example hint.
-- This is an example hint.
-
-`@pre_exercise_code`
-```{python}
-
-```
-
-`@sample_code`
-```{python}
-
-```
-
-`@solution`
-```{python}
-
-```
-
-`@sct`
-```{python}
-# Examples of good success messages: https://instructor-support.datacamp.com/en/articles/2299773-exercise-success-messages.
-```

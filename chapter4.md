@@ -40,30 +40,32 @@ key: 5606092a39
 xp: 50
 ```
 
-A while loop can be used to repeat identical tasks until a specific condition is met. If a condition is not defined properly, this can cause infinite looping. Additional control features must be present to contain looping iterations.
+A while loop can be used to repeat identical tasks until a specific condition is met. If a condition is not defined properly, this can cause infinite looping. Additional control features must be present to contain looping iterations. An example of an additional control is an iteration variable, which gets updated with every loop execution.
 
->Which of the following <b>*will*</b> result in an infinite loop?
+>Which of the following <b>*will not*</b> result in an infinite loop?
 
 `@hint`
-- n is a boolean
-- This is an example hint.
+-
+-
 
 `@possible_answers`
-- n = True
-<br>while n = 0:
+- n = 5
+<br>while True:
 <br>&nbsp;&nbsp;&nbsp;&nbsp; print("hello!")
-- n = 3
+- n = 5
 <br>while n > 4:
 <br>&nbsp;&nbsp;&nbsp;&nbsp; print("hello!")
-- [n = 2
-<br>while n == 2:
-<br>&nbsp;&nbsp;&nbsp;&nbsp; print("hello!")]
+<br>&nbsp;&nbsp;&nbsp;&nbsp; n++
+- [n = 0
+<br>while n < 2:
+<br>&nbsp;&nbsp;&nbsp;&nbsp; print("hello!")
+<br>&nbsp;&nbsp;&nbsp;&nbsp; n++]
 
 `@feedback`
 <!-- Examples of good feedback messages: https://instructor-support.datacamp.com/en/articles/2299773-exercise-success-messages.  -->
-- Incorrect. The loop will never execute, n is a boolean and there is an error in the while condition syntax
-- Incorrect. The loop will never execute because n = 3 which is always less than 4.
-- Correct! Since n has no additional control features, this loop will indefinitely execute
+- Incorrect.
+- Incorrect. While the iteration variable is updated in the loop, since it starts at 5 it will always execute. It would be a valid control feature if n--
+- Correct!
 
 ---
 

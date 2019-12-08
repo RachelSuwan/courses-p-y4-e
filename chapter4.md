@@ -179,115 +179,97 @@ success_msg("well done!")
 
 ---
 
-## Loop Idioms
+## Maximum and Minimum Loop Idiom
 
 ```yaml
-type: BulletExercise
-key: a845fdf35b
+type: NormalExercise
+key: a033de2959
 xp: 100
 ```
 
-Over the next few exercises, we will be practicing loop idioms or, functions that make specific tasks in loops easier to accomplish.
+Maximum and Minimum Loops
+<br>The sample code depicts an example of finding the largest value in a set of integers.
+![](https://assets.datacamp.com/production/repositories/5344/datasets/a06c595bcf29ccd6d5cd32978a5ec2ab4f92a3c7/larger%20var.PNG)
+
+
+
+`@instructions`
+Use a similar syntax to find the smallest value in the set `numbers`
+
+`@hint`
+- See photo, be sure to define the iteration variable as `iteration_variable`
+
+`@pre_exercise_code`
+```{python}
+numbers = [1,2,3,4]
+small = None
+```
+
+`@sample_code`
+```{python}
+numbers = [1,2,3,4]
+small = None
+```
+
+`@solution`
+```{python}
+for iteration_variable in numbers:
+  if small is None or iteration_variable < small:
+    small = iteration_variable 
+```
+
+`@sct`
+```{python}
+Ex().check_for_loop().check_iter().has_equal_value()
+Ex().check_for_loop().check_body().check_if_else().multi(
+            check_test().has_equal_ast(),
+            check_body().has_equal_ast()
+        )
+success_msg("well done!")
+```
+
+---
+
+## Counting Elements in a Loop
+
+```yaml
+type: NormalExercise
+key: a808ce6601
+xp: 100
+```
+
+Counting elements that meet a certain condition follow a similar syntax to finding the largest/smallest elements.
+
+`@instructions`
+- for elements in numbers, add 1 to greater_than if value is greater than 2
+
+`@hint`
+- See Maximum and Minimum Loop Idiom for syntax help
 
 `@pre_exercise_code`
 ```{python}
 
 ```
 
-***
-
-```yaml
-type: NormalExercise
-key: a3627e363f
-xp: 50
-```
-
-`@instructions`
-Maximum and Minimum Loops
-The sample code depicts an example of finding the largest value in a set of integers.
-- Use a similar syntax to create the following:
-  <br> - a variable `small` with no assigned value
-  <br> - find the smallest value in the set `numbers`
-
-`@hint`
-<!-- Examples of good hints: https://instructor-support.datacamp.com/en/articles/2379164-hints-best-practices. -->
-- This is an example hint.
-- This is an example hint.
-
 `@sample_code`
 ```{python}
-#defining place holder variable for largest number
-large = None
-
-#set that will be used to find largest variable
-numbers = [20,50,2,100,-4,3]
-
-#iteration_variable can have any name
-for iteration_variable in numbers:
-  #if variable is none, or if the next number in the list is larger
-  if large is None or iteration_variable > large:
-    #large is assigned that next number
-    large = iteration_variable 
-
+numbers = [1,2,3,4]
+greater_than = 0
 ```
 
 `@solution`
 ```{python}
-#defining place holder variable for smallest number
-small = None
-
-#set that will be used to find largest variable
-numbers = [20,50,2,100,-4,3]
-
-#iteration_variable can have any name
 for iteration_variable in numbers:
-  #if variable is none, or if the next number in the list is smaller
-  if small is None or iteration_variable < small:
-    #small is assigned that next number
-    small = iteration_variable 
+  if iteration_variable > 2:
+    greater_than = greater_than + 1
 ```
 
 `@sct`
 ```{python}
-Ex().check_for_loop().multi(
-    check_iter().has_equal_value(),
-    check_body().multi(
-        set_context('a', 1).has_equal_output(),
-        set_context('b', 2).has_equal_output()
-    )
-)
-success_msg("Good Job!")
-```
-
-***
-
-```yaml
-type: NormalExercise
-key: 671e0391e4
-xp: 50
-```
-
-`@instructions`
-<!-- Guidelines for instructions https://instructor-support.datacamp.com/en/articles/2375526-course-coding-exercises. -->
-- Instruction 1
-- Instruction 2
-
-`@hint`
-<!-- Examples of good hints: https://instructor-support.datacamp.com/en/articles/2379164-hints-best-practices. -->
-- This is an example hint.
-- This is an example hint.
-
-`@sample_code`
-```{python}
-
-```
-
-`@solution`
-```{python}
-
-```
-
-`@sct`
-```{python}
-# Examples of good success messages: https://instructor-support.datacamp.com/en/articles/2299773-exercise-success-messages.
+Ex().check_for_loop().check_iter().has_equal_value()
+Ex().check_for_loop().check_body().check_if_else().multi(
+            check_test().has_equal_ast(),
+            check_body().has_equal_ast()
+        )
+success_msg("well done!")
 ```

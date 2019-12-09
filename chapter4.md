@@ -211,6 +211,9 @@ small = None
 
 `@solution`
 ```{python}
+numbers = [1,2,3,4]
+small = None
+
 for iteration_variable in numbers:
   if small is None or iteration_variable < small:
     small = iteration_variable 

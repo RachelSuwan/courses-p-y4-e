@@ -191,8 +191,6 @@ Maximum and Minimum Loops
 <br>The sample code depicts an example of finding the largest value in a set of integers.
 ![](https://assets.datacamp.com/production/repositories/5344/datasets/a06c595bcf29ccd6d5cd32978a5ec2ab4f92a3c7/larger%20var.PNG)
 
-
-
 `@instructions`
 Use a similar syntax to find the smallest value in the set `numbers`
 
